@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1615904389 source:c:\users\cpruvost\documents\code\autoformation\premier jeux\premier_jeux\main.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+
