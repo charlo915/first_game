@@ -3,31 +3,30 @@
 #include <time.h>
 #include <stdbool.h>
 
-int MAX = 100, MIN = 1;
-int recommence =0;
-int niveauDifficulte = 0;
-int NivDifficulte (int niveauDifficulte);
+int MAX = 100 ,MIN = 1;
+int recommence = 0;
+int NivDifficulte (int MAX);
 
 int main()
 {
     printf("Bienvenue ! \n");
     do {
-        niveauDifficulte = NivDifficulte (niveauDifficulte);
-    } while (niveauDifficulte != 1 && niveauDifficulte != 2 && niveauDifficulte != 3);
+        MAX = NivDifficulte (MAX);
+    } while (MAX != 100 && MAX != 500 && MAX != 1000);
 
     do {
         if (recommence == 1){
             do {
-                niveauDifficulte = NivDifficulte (niveauDifficulte);
-            }while (niveauDifficulte != 1 && niveauDifficulte != 2 && niveauDifficulte !=3);
+                MAX = NivDifficulte (MAX);
+            } while (MAX != 100 && MAX != 500 && MAX != 1000);
         }
         int nombreRechercher= 0;
         int compteur=0;
         srand(time(NULL));
         int nombreMystere = (rand() % (MAX - MIN +1 ))+ MIN;
-       /* printf("NombreMystere = %d \n",nombreMystere);
+        printf("NombreMystere = %d \n",nombreMystere);
         printf("MAX = %d \n",MAX);
-        printf("MIN = %d \n",MIN);*/
+        printf("MIN = %d \n",MIN);
             do
             {
             printf("Quel est le nombre ? ");
@@ -49,13 +48,17 @@ int main()
         printf("2. Non\n");
         printf("---------------------------\n\n");
         scanf ("%d",&recommence);
+        if (recommence == 2){
+            printf("Bonne journee et a bientot mon ami !\n");
+        }
     }
     while (recommence == 1);
 
     return 0;
 }
 
-int NivDifficulte (int niveauDifficulte){
+int NivDifficulte (int MAX){
+    int niveauDifficulte = 0;
     printf("Veuillez choisir un niveau de difficulte \n");
     printf("1. Facile - entre 1 et 100\n");
     printf("2. Moyen - entre 1 et 500\n");
@@ -78,5 +81,5 @@ int NivDifficulte (int niveauDifficulte){
     }
         //printf("niveauDifficulte = %d \n",niveauDifficulte);
     getchar ();
-    return niveauDifficulte;
+    return MAX;
 }
