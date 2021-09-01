@@ -24,9 +24,9 @@ int main()
         int compteur=0;
         srand(time(NULL));
         int nombreMystere = (rand() % (MAX - MIN +1 ))+ MIN;
-        printf("NombreMystere = %d \n",nombreMystere);
-        printf("MAX = %d \n",MAX);
-        printf("MIN = %d \n",MIN);
+        //printf("NombreMystere = %d \n",nombreMystere);
+        //printf("MAX = %d \n",MAX);
+        //printf("MIN = %d \n",MIN);
             do
             {
             printf("Quel est le nombre ? ");
@@ -67,14 +67,13 @@ int NivDifficulte (int MAX){
     scanf ("%d",&niveauDifficulte);
     if (niveauDifficulte == 1 ){
         MAX = 100;
-        printf("Facile\n");
+        printf("Vous avez choisi : Facile\n");
     } else if (niveauDifficulte == 2){
         MAX = 500;
-        printf("Moyen\n");
-        printf("Moyen\n");
+        printf("Vous avez choisi : Moyen\n");
     } else if (niveauDifficulte == 3){
         MAX = 1000;
-        printf("Difficile\n");
+        printf("Vous avez choisi : Difficile\n");
     } else {
         printf("Mauvais choix de difficulte \n");
         printf("Choisie entre 1,2 ou 3 imbecile \n");
